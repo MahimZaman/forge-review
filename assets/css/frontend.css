@@ -1,0 +1,292 @@
+:root {
+}
+
+.fr-review-form form {
+  display: none;
+  align-items: flex-start;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fr-form-full {
+  grid-column: span 2;
+}
+
+.fr-form-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  grid-column: span 2;
+}
+
+.fr-form-action > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+#cancel-review {
+  margin-left: auto;
+}
+
+.fr-loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: none;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+select#fr-rating {
+  max-width: 60px;
+  background-position: calc(100% - 10px) center;
+  background-size: 10px;
+}
+
+label.fr-form-label {
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.fr-form-group input,
+.fr-form-group select,
+.fr-form-group textarea {
+  border: 1px solid #d9d9d9 !important;
+  resize: none;
+  height: auto;
+  line-height: 1.5;
+}
+
+#show-review {
+  margin-left: auto;
+}
+
+.fr-review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fr-review-item {
+  display: flex;
+  gap: 20px;
+}
+
+.fr-user {
+  width: 190px;
+  border-right: 1px solid #d9d9d9;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.fr-review-detail {
+  width: calc(100% - 190px);
+  display: flex;
+  flex-direction: column;
+}
+
+.fr-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+span.fr-star {
+  font-size: 19px;
+  color: #d9d9d9;
+  display: block;
+}
+
+span.fr-star.filled {
+  color: #303030;
+}
+
+h3.fr-post-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+p.fr-feedback {
+  font-size: 15px;
+  color: #444;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px 0 !important;
+}
+
+span.fr-review-date {
+  color: #303030;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.fr-review-item {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.fr-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+span.fr-page {
+  width: 25px;
+  height: 35px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+span.fr-page.active {
+  font-weight: 600;
+  border-bottom: 2px solid currentColor;
+}
+
+.fr-reviews-header {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#sort-review {
+  width: auto;
+  background-position: calc(100% - 10px) center;
+  border: none;
+  padding: 10px 20px 10px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: auto;
+}
+
+/* Container */
+.fr-summary {
+  display: inline-block;
+}
+
+/* Skeleton */
+.fr-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: frpulse 1.2s infinite ease-in-out;
+}
+
+.fr-skel-rating,
+.fr-skel-stars,
+.fr-skel-text {
+  background: #e5e7eb;
+  border-radius: 6px;
+}
+
+.fr-skel-rating {
+  width: 60px;
+  height: 20px;
+}
+
+.fr-skel-stars {
+  width: 120px;
+  height: 18px;
+}
+
+.fr-skel-text {
+  width: 140px;
+  height: 14px;
+}
+
+@keyframes frpulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.fr-summary-inner {
+  display: flex;
+  gap: 0px 10px;
+  max-width: 129px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.fr-rating {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.fr-summary-stars i {
+  color: #303030;
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.fr-count {
+  font-size: 13px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .fr-review-form form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .fr-form-full,
+  .fr-form-action {
+    grid-column: span 1;
+  }
+
+  .fr-review-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fr-user {
+    width: 100%;
+    border-right: none;
+  }
+
+  .fr-review-detail {
+    width: 100%;
+  }
+}

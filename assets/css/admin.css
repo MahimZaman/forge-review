@@ -1,0 +1,87 @@
+.fr-meta-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.fr-meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #eef0f2;
+}
+
+.fr-meta-row label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fr-meta-value {
+  font-size: 14px;
+  color: #111827;
+  word-break: break-word;
+}
+
+.fr-feedback {
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ⭐ Rating */
+.fr-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.fr-star {
+  font-size: 18px;
+  color: #d1d5db;
+}
+
+.fr-star.filled {
+  color: #f59e0b;
+}
+
+/* Subtle hover effect */
+.fr-meta-row:hover {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.fr-admin-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.fr-admin-stars .star {
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+.fr-admin-stars .star.filled {
+  color: #f59e0b;
+}
+
+.column-fr_rating {
+  width: 120px;
+}
+
+.column-fr_name {
+  width: 140px;
+  font-weight: 500;
+}
+
+.column-fr_email {
+  width: 180px;
+}
+
+.column-fr_post {
+  width: 200px;
+}
